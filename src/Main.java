@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         int a = inputValuesInArray();
         System.out.println(a);
+        System.out.println(test1());
     }
 
 
@@ -18,7 +19,14 @@ public class Main {
         for(int i = 0; i < SIZE; i++){
             arr[i] = scn.nextInt();
         }
+        System.out.println(Arrays.toString(arr));
         return solution(arr);
+    }
+
+    public static int test1(){
+        int[] array = {1, 5, 4, 3, 7};
+        System.out.println(Arrays.toString(array));
+        return solution(array);
     }
 
     static int solution(int[] a){
@@ -46,7 +54,7 @@ public class Main {
         if(a[a.length - 1] < a[a.length - 2 ]){
             countermin++;
         }
-        System.out.println(Arrays.toString(a));
+
         return countermin + countermax;
     }
 
